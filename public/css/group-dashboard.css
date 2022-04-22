@@ -1,0 +1,395 @@
+.page {
+    display: grid;
+    align-items: stretch;
+    flex-direction: column;
+    min-height: 100vh;
+
+    grid-template-columns: 20px repeat(2, 3fr) 20px;
+    grid-template-rows: 50px 200px repeat(4, 1fr);
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+
+    background-color: #1a202c;
+    /*background: rgb(11,13,18);*/
+    /*background: linear-gradient(72deg, rgb(26, 32, 44) 0%, rgb(39, 50, 71) 100%);*/
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 10px;
+    padding: 0 20px 0 20px;
+}
+
+.nav > .logo {
+    width: 20%;
+    align-self: center;
+}
+
+.nav > .logo > h3 {
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin: 0;
+    transition: 0.2s;
+}
+
+.nav > .logo > h3:hover {
+    color: #b1f3ff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav > .links {
+    width: 80%;
+}
+
+.nav > .links > ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+}
+
+.nav > .links > ul > li > a{
+    color: #4e647d;
+    transition: 0.2s;
+}
+
+.nav > .links > ul > li > a:hover{
+    color: #b1f3ff;
+    transition: 0.2s;
+}
+
+.title{
+    grid-area: 2 / 2 / 3 / 4;
+}
+
+.title > h2{
+    font-size: 40px;
+    margin: 0;
+    font-weight: 700;
+    color: white;
+}
+
+.title > p {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #5d6a7f;
+}
+
+.group-container {
+    grid-area: 3 / 2 / 7 / 4;
+    flex-wrap: wrap;
+
+    display: flex;
+    column-gap: 26px;
+    row-gap: 26px;
+    align-content: flex-start;
+
+    height: 100%;
+
+    padding-bottom: 26px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.title > .filter {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 230px;
+    background-color: #2E3F52FF;
+    border-radius: 5px;
+}
+
+.title > .filter > form > input {
+    width: 87%;
+    justify-content: center;
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 12px;
+}
+
+.title > .filter > form {
+    display: flex;
+    margin: 0;
+}
+
+.title > .filter > form > input:focus {
+    outline: none;
+}
+
+.title > .filter > form > input::placeholder {
+    color: #8493a3;
+}
+
+.title > .filter > form > button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.title > .filter > form > button > span {
+    width: 13%;
+    color: #8493a3;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.title > .filter > form > button > span:hover {
+    color: white;
+    transition: 0.2s;
+}
+
+.title > .filter-badge {
+    display: flex;
+    align-items: center;
+    width: min-content;
+    background-color: #6984a1;
+    border: none;
+    border-radius: 20px;
+    margin: 10px 0 20px 0;
+    padding: 5px 15px 5px 10px;
+    color: white;
+}
+
+.title > .filter-badge > p{
+    margin: 0;
+}
+
+.title > .filter-badge > a > span{
+    color: white;
+    font-size: 17px;
+    margin-right: 5px;
+}
+
+.group {
+    display: flex;
+    width: 400px;
+    height: 160px;
+
+    border-radius: 20px;
+    background-color: #2E3F52FF;
+
+    transition: 0.2s;
+}
+
+.group:hover {
+    background-color: #3e546d;
+    transition: 0.2s;
+}
+
+.group > .group-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+}
+
+.group > .group-content > .group-icon {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    z-index: 2;
+}
+
+.group > .group-content > .group-icon > button {
+    background: transparent;
+    border: none;
+    color: white;
+    transition: 0.2s;
+}
+
+.group > .group-content > .group-icon > button:hover {
+    color: #b1f3ff;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+
+.group > .group-content > .group-info {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+}
+
+.group > .group-content > .group-info h3{
+    font-size: 25px;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.group > .group-content > .group-info p{
+    font-size: 17px;
+    margin: 0;
+    font-weight: 100;
+    color: #98a1af;
+}
+
+.group > a {
+    width: inherit;
+    height: inherit;
+    z-index: 1;
+    position: absolute;
+}
+
+/*////*/
+
+.add-group-button {
+    overflow: hidden;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    height: 50px;
+    aspect-ratio: 1;
+    border-radius: 30px;
+    background-color: #4e647d;
+
+    box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.49);
+
+}
+
+.add-group-button > button{
+    width: 100%;
+    height: 100%;
+    color: white;
+    border: none;
+    background: transparent;
+    transition: 0.2s;
+}
+
+.add-group-button > button:hover{
+    background-color: #889db4;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/*MODAL*/
+
+.modal-dialog {
+    justify-content: center;
+    display: flex;
+}
+
+.modal-content {
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 400px;
+}
+
+.modal-content > .modal-footer button {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    padding: 7px 13px 7px 13px;
+
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+.form-button {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    padding: 7px 13px 7px 13px;
+    background-color: #0c63e4;
+
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+.form-button:hover {
+    background-color: #377ce3;
+}
+
+.form-control {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.modal-header {
+    border-bottom: 0 none;
+}
+
+.modal-footer {
+    border-top: 0 none;
+}
+
+.modal-body > form > .container{
+    padding: 0;
+}
+
+.modal-body > form > .container > p{
+    margin: 0;
+}
+
+.modal-body > form > table > tbody > tr {
+    border-style: none;
+}
+
+.modal-body > form > table > tbody > tr > td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.modal-body > form > table > tbody > tr > td > input {
+    margin: 0;
+}
+
+.delete-button {
+    background: transparent;
+    color: indianred;
+    border: none;
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .group {
+        width: 160px;
+        height: 160px;
+    }
+
+    .group-container {
+        column-gap: 17px;
+        row-gap: 17px;
+    }
+
+    .group > .group-content > .group-info h3{
+        font-size: 16px;
+    }
+
+    .group > .group-content > .group-info p{
+        font-size: 13px;
+        margin: 0;
+        font-weight: 100;
+        color: #98a1af;;
+    }
+}
